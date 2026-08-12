@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дара от природата — здравословни торти в Царево</title>
+<meta name="description" content="Здравословни ръчно правени торти в Царево: веган, без захар, без глутен и сурови десерти. Търсете по вкус и режим на хранене.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+/* =======================================================
+   ШАБЛОН 3 — „ШАМ ФЪСТЪК & МАЛИНА“
+   TEMPLATE 3 — PISTACHIO & RASPBERRY
+   Palette: off-white, pistachio green, raspberry, warm cream
+   Mood: bright, modern, health-forward, e-commerce ready
+   ======================================================= */
+:root{
+  --bg:#FAFAF6; --paper:#FFFFFF; --cream:#FFF7EC;
+  --ink:#22302A; --ink-soft:#5E6E66;
+  --pist:#6FA557; --pist-soft:#E6F1DD; --pist-deep:#4C7B3A;
+  --rasp:#D2547A; --rasp-soft:#FCE6EC;
+  --line:#E8E7DF;
+  --disp:'DM Serif Display', Georgia, serif;
+  --sans:'DM Sans','Helvetica Neue',Arial,sans-serif;
+  --r:20px; --r-sm:12px;
+  --sh:0 14px 34px -20px rgba(34,48,42,.35);
+  --sh-lg:0 30px 60px -32px rgba(34,48,42,.45);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:400;line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1220px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:var(--disp);font-weight:400;line-height:1.14;margin:0}
+.eyebrow{display:inline-block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--pist-deep);background:var(--pist-soft);padding:6px 15px;border-radius:99px}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:80;background:rgba(250,250,246,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;height:78px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand img{width:46px;height:46px;object-fit:contain}
+.brand b{font-family:var(--disp);font-size:1.28rem;display:block;line-height:1.05}
+.brand span{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--pist-deep);font-weight:700}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-size:.86rem;font-weight:500}
+nav a{text-decoration:none;padding:7px 0;border-bottom:2px solid transparent;transition:.2s}
+nav a:hover{border-color:var(--rasp);color:var(--rasp)}
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;background:var(--ink);color:#fff;padding:13px 26px;border-radius:99px;font-family:var(--sans);font-size:.85rem;font-weight:500;text-decoration:none;cursor:pointer;transition:.25s}
+.btn:hover{background:var(--pist-deep);transform:translateY(-2px)}
+.btn-out{background:none;color:var(--ink);border:1.5px solid var(--ink)}
+.btn-out:hover{background:var(--ink);color:#fff}
+.btn-rasp{background:var(--rasp)}.btn-rasp:hover{background:#B8446A}
+.lang{display:flex;background:var(--paper);border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.lang button{background:none;border:none;font:inherit;font-size:.74rem;font-weight:700;letter-spacing:.08em;padding:7px 13px;cursor:pointer;color:var(--ink-soft)}
+.lang button.on{background:var(--ink);color:#fff}
+.burger{display:none;background:none;border:none;font-size:1.45rem;cursor:pointer;color:var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{padding:64px 0 84px}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.4rem);letter-spacing:-.02em}
+.hero h1 em{font-style:italic;color:var(--pist-deep)}
+.hero .lead{font-size:1.06rem;color:var(--ink-soft);max-width:44ch;margin:22px 0 28px}
+.pill-row{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}
+.pill{font-size:.76rem;font-weight:600;padding:7px 16px;border-radius:99px;background:var(--paper);border:1px solid var(--line)}
+.pill.g{background:var(--pist-soft);border-color:transparent;color:var(--pist-deep)}
+.pill.r{background:var(--rasp-soft);border-color:transparent;color:#A8355A}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap}
+.collage{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.collage img{border-radius:var(--r);box-shadow:var(--sh);aspect-ratio:3/4;object-fit:cover;width:100%}
+.collage img:nth-child(1){aspect-ratio:3/4;margin-top:34px}
+.collage img:nth-child(2){aspect-ratio:3/4}
+.collage .float{position:absolute;bottom:-22px;left:50%;transform:translateX(-50%);background:var(--paper);border-radius:99px;padding:11px 22px;box-shadow:var(--sh-lg);display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:600;white-space:nowrap}
+.collage .float img{width:30px;height:30px;border-radius:0;box-shadow:none;aspect-ratio:1;margin:0}
+
+/* ---------- strip ---------- */
+.strip{background:var(--ink);color:#EAF0EC;padding:22px 0}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+.strip b{font-family:var(--disp);font-size:1.7rem;display:block;color:#fff;line-height:1.2}
+.strip span{font-size:.78rem;color:#A9BAB1}
+
+/* ---------- sections ---------- */
+section{padding:86px 0}
+.sec-head{max-width:660px;margin:0 auto 40px;text-align:center}
+.sec-head h2{font-size:clamp(2rem,3.8vw,3rem);margin-top:14px}
+.sec-head p{color:var(--ink-soft);margin-top:12px}
+
+/* ---------- toolbar ---------- */
+.toolbar{position:sticky;top:78px;z-index:60;background:var(--bg);padding:16px 0 20px;border-bottom:1px solid var(--line);margin-bottom:34px}
+.tb-in{display:flex;flex-direction:column;gap:14px}
+.search{position:relative;max-width:420px;width:100%;margin:0 auto}
+.search input{width:100%;border:1px solid var(--line);background:var(--paper);border-radius:99px;padding:12px 20px 12px 44px;font:inherit;font-size:.9rem;outline:none;transition:.2s}
+.search input:focus{border-color:var(--pist);box-shadow:0 0 0 4px var(--pist-soft)}
+.search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);opacity:.45}
+.rowf{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.chip{border:1px solid var(--line);background:var(--paper);color:var(--ink-soft);padding:8px 17px;border-radius:99px;font:inherit;font-size:.8rem;font-weight:500;cursor:pointer;transition:.2s}
+.chip:hover{border-color:var(--pist)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip.d.on{background:var(--pist);border-color:var(--pist)}
+.count{text-align:center;font-size:.82rem;color:var(--ink-soft)}
+
+/* ---------- grid ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:26px}
+.card{background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:var(--sh);display:flex;flex-direction:column;transition:.3s;position:relative}
+.card:hover{transform:translateY(-7px);box-shadow:var(--sh-lg)}
+.card-img{aspect-ratio:1/1;overflow:hidden;background:var(--pist-soft);cursor:pointer}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:.7s cubic-bezier(.2,.7,.3,1)}
+.card:hover .card-img img{transform:scale(1.07)}
+.chiplets{position:absolute;top:13px;left:13px;display:flex;flex-wrap:wrap;gap:5px;max-width:72%}
+.chiplet{font-size:.63rem;font-weight:700;letter-spacing:.04em;background:rgba(255,255,255,.94);color:var(--pist-deep);padding:4px 10px;border-radius:99px;backdrop-filter:blur(4px)}
+.chiplet.raw{color:#A8355A}
+.card-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:1.3rem;margin-bottom:7px}
+.card p{font-size:.855rem;color:var(--ink-soft);margin:0 0 16px;flex:1;line-height:1.6}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;border-top:1px solid var(--line)}
+.price{font-family:var(--disp);font-size:1.4rem;color:var(--pist-deep)}
+.price small{font-family:var(--sans);font-size:.7rem;color:var(--ink-soft);margin-left:4px;font-weight:500}
+.mini{font-size:.78rem;font-weight:600;text-decoration:none;color:var(--rasp);white-space:nowrap}
+.mini:hover{text-decoration:underline}
+.empty{grid-column:1/-1;text-align:center;color:var(--ink-soft);padding:50px 0}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{background:var(--cream);border-radius:var(--r);padding:34px 28px;text-align:center}
+.step .n{width:44px;height:44px;border-radius:50%;background:var(--rasp);color:#fff;font-family:var(--disp);font-size:1.25rem;display:grid;place-items:center;margin:0 auto 16px}
+.step h3{font-size:1.25rem;margin-bottom:8px}
+.step p{font-size:.88rem;color:var(--ink-soft);margin:0}
+
+/* ---------- gallery ---------- */
+.gal{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.gal img{aspect-ratio:1/1;object-fit:cover;border-radius:var(--r-sm);cursor:pointer;transition:.3s}
+.gal img:hover{transform:scale(1.04)}
+
+/* ---------- menu blocks ---------- */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.panel{background:var(--paper);border-radius:var(--r);box-shadow:var(--sh);overflow:hidden}
+.panel .ph{aspect-ratio:16/9;overflow:hidden}
+.panel .ph img{width:100%;height:100%;object-fit:cover}
+.panel .bd{padding:30px 30px 34px}
+.panel h3{font-size:1.6rem;margin-bottom:6px}
+.panel>.bd>p{color:var(--ink-soft);font-size:.9rem;margin:0}
+.plist{list-style:none;margin:18px 0 0;padding:0}
+.plist li{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+.plist li:last-child{border-bottom:none}
+.plist b{font-family:var(--disp);font-weight:400;color:var(--pist-deep);white-space:nowrap}
+
+/* ---------- faq ---------- */
+.faq{max-width:760px;margin:0 auto}
+details{background:var(--paper);border-radius:var(--r-sm);margin-bottom:11px;box-shadow:var(--sh);overflow:hidden}
+summary{padding:19px 24px;cursor:pointer;font-weight:600;font-size:.96rem;list-style:none;display:flex;justify-content:space-between;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;color:var(--rasp);line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin:0;padding:0 24px 22px;color:var(--ink-soft);font-size:.9rem}
+
+/* ---------- contact ---------- */
+.contact{background:var(--pist-soft)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cc{background:var(--paper);border-radius:var(--r);padding:34px 26px;text-align:center;box-shadow:var(--sh)}
+.cc .ic{font-size:1.6rem;margin-bottom:8px}
+.cc h3{font-size:1.2rem;margin-bottom:8px}
+.cc a,.cc p{color:var(--ink-soft);text-decoration:none;font-size:.9rem;margin:0}
+.cc a:hover{color:var(--rasp)}
+
+footer{background:var(--ink);color:#9EAFA6;padding:44px 0;font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+footer a{color:#C6D4CC;text-decoration:none}footer a:hover{color:#fff}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;background:rgba(34,48,42,.93);display:none;place-items:center;z-index:200;padding:28px}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;object-fit:contain;border-radius:var(--r)}
+.lb button{position:absolute;top:20px;right:26px;background:none;border:none;color:#fff;font-size:2.3rem;cursor:pointer;line-height:1}
+
+@media(max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .strip-grid{grid-template-columns:repeat(2,1fr);gap:24px}
+  .steps{grid-template-columns:1fr}
+  .two{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(3,1fr)}
+  .cgrid{grid-template-columns:1fr}
+  nav ul{display:none}
+  .burger{display:block}
+  nav.open ul{display:flex;position:absolute;top:78px;left:0;right:0;background:var(--bg);flex-direction:column;gap:0;padding:8px 24px 20px;border-bottom:1px solid var(--line)}
+  nav.open ul li{padding:13px 0;border-bottom:1px solid var(--line)}
+  .toolbar{top:78px}
+}
+@media(max-width:620px){
+  section{padding:60px 0}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .grid{grid-template-columns:1fr}
+  .hero-cta .btn{flex:1;justify-content:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img src="assets/logo-mark.png" alt="Дара">
+      <span><b data-i18n="brandName"></b><span data-i18n="brandMotto"></span></span>
+    </a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#catalog" data-i18n="nav_catalog"></a></li>
+        <li><a href="#decor" data-i18n="nav_decor"></a></li>
+        <li><a href="#more" data-i18n="nav_brunch"></a></li>
+        <li><a href="#how" data-i18n="howNav"></a></li>
+        <li><a href="#contact" data-i18n="nav_contact"></a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;gap:11px;align-items:center">
+      <div class="lang"><button data-lang="bg" class="on">BG</button><button data-lang="en">EN</button></div>
+      <a class="btn btn-rasp" href="#contact" data-i18n="order_now"></a>
+      <button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow" data-i18n="heroEyebrow"></span>
+      <h1 data-i18n-html="heroTitle" style="margin-top:18px"></h1>
+      <p class="lead" data-i18n="heroLead"></p>
+      <div class="pill-row" id="pills"></div>
+      <div class="hero-cta">
+        <a class="btn" href="#catalog" data-i18n="view_catalog"></a>
+        <a class="btn btn-out" href="tel:+359878838353" data-i18n="call_us"></a>
+      </div>
+    </div>
+    <div class="collage">
+      <img src="assets/raw-matcha-lime.jpg" alt="">
+      <img src="assets/mojito.jpg" alt="">
+      <div class="float"><img src="assets/logo-mark.png" alt=""><span data-i18n="floatBadge"></span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ NUMBERS STRIP ============ -->
+<div class="strip">
+  <div class="wrap"><div class="strip-grid" id="strip"></div></div>
+</div>
+
+<!-- ============ CATALOG ============ -->
+<section id="catalog" style="padding-top:70px">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="catEyebrow"></span>
+      <h2 data-i18n="catTitle"></h2>
+      <p data-i18n="catLead"></p>
+    </div>
+  </div>
+
+  <div class="toolbar">
+    <div class="wrap tb-in">
+      <div class="search">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="q" type="search" autocomplete="off">
+      </div>
+      <div class="rowf" id="cats"></div>
+      <div class="rowf" id="diets"></div>
+      <div class="count" id="count"></div>
+    </div>
+  </div>
+
+  <div class="wrap"><div class="grid" id="grid"></div></div>
+</section>
+
+<!-- ============ DECOR ============ -->
+<section id="decor" style="background:var(--cream)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="decEyebrow"></span>
+      <h2 data-i18n="decTitle"></h2>
+      <p data-i18n="decLead"></p>
+    </div>
+    <div class="gal" id="gal1" style="margin-bottom:12px"></div>
+    <div class="gal" id="gal2"></div>
+    <ul class="plist" id="decPrices" style="max-width:480px;margin:32px auto 0;background:var(--paper);border-radius:var(--r);padding:22px 26px;box-shadow:var(--sh)"></ul>
+    <p id="decNote" style="max-width:720px;margin:24px auto 0;text-align:center;font-size:.88rem;color:var(--ink-soft);font-style:italic"></p>
+  </div>
+</section>
+
+<!-- ============ BRUNCH + CATERING ============ -->
+<section id="more">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="moreEyebrow"></span>
+      <h2 data-i18n="moreTitle"></h2>
+    </div>
+    <div class="two">
+      <div class="panel">
+        <div class="ph"><img src="assets/brunch-1.jpg" alt=""></div>
+        <div class="bd">
+          <h3 data-i18n="brunchTitle"></h3>
+          <p data-i18n="brunchLead"></p>
+          <ul class="plist" id="brunchList"></ul>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="ph"><img src="assets/catering-3.jpg" alt=""></div>
+        <div class="bd">
+          <h3 data-i18n="cateringTitle"></h3>
+          <p data-i18n="cateringLead"></p>
+          <ul class="plist" id="cateringList"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW TO ORDER ============ -->
+<section id="how" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="howEyebrow"></span>
+      <h2 data-i18n="howTitle"></h2>
+    </div>
+    <div class="steps" id="steps"></div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="faqEyebrow"></span>
+      <h2 data-i18n="faqTitle"></h2>
+    </div>
+    <div class="faq" id="faq"></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow" data-i18n="conEyebrow"></span>
+      <h2 data-i18n="conTitle"></h2>
+      <p data-i18n="order_note"></p>
+    </div>
+    <div class="cgrid">
+      <div class="cc"><div class="ic">☎</div><h3 data-i18n="conCall"></h3><a href="tel:+359878838353">087 883 8353</a><p data-i18n="hours_val" style="margin-top:6px;font-size:.82rem"></p></div>
+      <div class="cc"><div class="ic">📍</div><h3 data-i18n="conFind"></h3><a id="mapLink" target="_blank" rel="noopener" data-i18n="address"></a></div>
+      <div class="cc"><div class="ic">♡</div><h3 data-i18n="conFollow"></h3>
+        <a href="https://www.instagram.com/dara_cakess" target="_blank" rel="noopener">@dara_cakess</a><br>
+        <a href="https://www.facebook.com/daraartcakes" target="_blank" rel="noopener">daraartcakes</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> <span data-i18n="brandName"></span> — <span data-i18n="city"></span></span>
+    <span data-i18n="footNote"></span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" onclick="this.classList.remove('on')"><button>×</button><img id="lbImg" alt=""></div>
+
+<script src="assets/data.js"></script>
+<script>
+const COPY = {
+  brandName:{bg:"Дара",en:"Dara"},
+  brandMotto:{bg:"от природата",en:"from nature"},
+  heroEyebrow:{bg:"Царево • Ръчна изработка",en:"Tsarevo • Handmade"},
+  heroTitle:{bg:"Сладко,<br>което ти <em>прави добро</em>",en:"Sweet that is<br><em>good for you</em>"},
+  heroLead:{bg:"Здравословни торти с ядки, фурми, кокос и мед. Веган, без захар и без глутен — избери своя вкус и режим.",
+            en:"Wholesome cakes with nuts, dates, coconut and honey. Vegan, sugar-free and gluten-free — pick your flavour and your diet."},
+  floatBadge:{bg:"от природата, с любов",en:"from nature, with love"},
+  catEyebrow:{bg:"Каталог 2026",en:"Catalogue 2026"},
+  catTitle:{bg:"Намери своята торта",en:"Find your cake"},
+  catLead:{bg:"Търси по име или съставка, филтрирай по категория и хранителен режим.",
+           en:"Search by name or ingredient, filter by category and dietary preference."},
+  searchPh:{bg:"Търси торта или съставка…",en:"Search a cake or ingredient…"},
+  decEyebrow:{bg:"Ръчно рисувани",en:"Hand-painted"},
+  decTitle:{bg:"Декорации за всеки повод",en:"Decorations for every occasion"},
+  decLead:{bg:"Детски рождени дни, кръщенета и сватбени торти.",en:"Children's birthdays, christenings and wedding cakes."},
+  moreEyebrow:{bg:"И още",en:"And more"},
+  moreTitle:{bg:"Брънч и кетъринг",en:"Brunch & catering"},
+  brunchTitle:{bg:"Брънч",en:"Brunch"},
+  brunchLead:{bg:"Тостове, поке, кроасани и салати според сезона.",en:"Toasts, poke bowls, croissants and seasonal salads."},
+  cateringTitle:{bg:"Кетъринг",en:"Catering"},
+  cateringLead:{bg:"Хапки и солени изкушения за вашето събитие.",en:"Canapés and savoury bites for your event."},
+  howNav:{bg:"Поръчка",en:"Ordering"},
+  howEyebrow:{bg:"Лесно е",en:"It's simple"},
+  howTitle:{bg:"Как да поръчате",en:"How to order"},
+  faqEyebrow:{bg:"Въпроси",en:"Questions"},
+  faqTitle:{bg:"Често задавани въпроси",en:"Frequently asked questions"},
+  conEyebrow:{bg:"Заповядайте",en:"Come and see us"},
+  conTitle:{bg:"Контакти и поръчки",en:"Contact & orders"},
+  conCall:{bg:"Обадете се",en:"Call us"},
+  conFind:{bg:"Намерете ни",en:"Find us"},
+  conFollow:{bg:"Последвайте ни",en:"Follow us"},
+  footNote:{bg:"Всяка торта е уникална и неповторима.",en:"Every cake is unique and unrepeatable."},
+  address:{bg:SITE.address.bg,en:SITE.address.en},
+  city:{bg:SITE.city.bg,en:SITE.city.en},
+  pills:{bg:["Веган","Без захар","Без глутен","Сурови торти","Без изкуствени оцветители"],
+         en:["Vegan","Sugar-free","Gluten-free","Raw cakes","No artificial colourings"]},
+  strip:{bg:[["34+","торти в каталога"],["7","категории"],["100%","ръчна изработка"],["48ч","предварителна поръчка"]],
+         en:[["34+","cakes in the catalogue"],["7","categories"],["100%","handmade"],["48h","advance notice"]]},
+  steps:{bg:[["1","Изберете","Разгледайте каталога и си харесайте торта — или ни кажете вкус и повод."],
+             ["2","Обадете се","Позвънете или ни пишете в Instagram поне 48 часа предварително."],
+             ["3","Вземете","Взимате от сладкарницата на ул. „Екзарх Йосиф“ 1 в Царево."]],
+         en:[["1","Choose","Browse the catalogue and pick a cake — or just tell us the flavour and occasion."],
+             ["2","Call us","Ring us or message us on Instagram at least 48 hours ahead."],
+             ["3","Collect","Pick it up from our shop at 1 Ekzarh Yosif St, Tsarevo."]]},
+  faq:{bg:[["Колко предварително трябва да поръчам?","Тортите се приготвят по поръчка — молим за поне 48 часа предварително. В активния летен сезон препоръчваме 3–4 дни."],
+           ["Имате ли веган и безглутенови торти?","Да. Всички сурови торти са без захар и без глутен, а голяма част са и веган. Използвайте филтрите в каталога."],
+           ["Може ли торта по моя снимка?","Всички декорации се рисуват на ръка и следват сезона, затова не изпълняваме модели едно към едно. Кажете ни идеята и ще я направим по нашия начин."],
+           ["Колко струва декорацията?","Украса с плодове 3.00 €, надпис 3.00 €, детска декорация от 10.00 до 25.00 € според сложността."],
+           ["Правите ли сватбени торти?","Да — многоетажни торти с ръчна украса. Свържете се с нас възможно най-рано, за да запазим датата."]],
+       en:[["How far in advance should I order?","Cakes are made to order — please allow at least 48 hours. During the busy summer season we recommend 3–4 days."],
+           ["Do you have vegan and gluten-free cakes?","Yes. All raw cakes are sugar-free and gluten-free, and many are vegan too. Use the filters in the catalogue."],
+           ["Can you copy a cake from a photo?","Every decoration is hand-painted and follows the season, so we don't copy designs one-to-one. Tell us your idea and we will make it our way."],
+           ["How much does decoration cost?","Fruit decoration €3.00, hand-written message €3.00, children's decoration from €10.00 to €25.00 depending on complexity."],
+           ["Do you make wedding cakes?","Yes — tiered cakes with hand-made decoration. Please get in touch as early as possible so we can hold the date."]]}
+};
+
+/* safe storage — works in private mode and from file:// */
+const store = {
+  get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } },
+  set(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+};
+let LANG = store.get('dara-lang') || 'bg';
+let activeCat='all', activeDiets=new Set(), query='';
+
+function setLang(l){
+  LANG=l; store.set('dara-lang',l);
+  document.documentElement.lang=l;
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const s=COPY[el.dataset.i18n]||UI[el.dataset.i18n]; if(s) el.textContent=s[l];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    const s=COPY[el.dataset.i18nHtml]; if(s) el.innerHTML=s[l];
+  });
+  document.getElementById('q').placeholder = COPY.searchPh[l];
+  document.getElementById('mapLink').href = SITE.mapsUrl;
+  renderPills(); renderStrip(); renderFilters(); renderGrid();
+  renderDecor(); renderLists(); renderSteps(); renderFaq();
+}
+
+function renderPills(){
+  document.getElementById('pills').innerHTML =
+    COPY.pills[LANG].map((p,i)=>`<span class="pill ${i%2?'r':'g'}">${p}</span>`).join('');
+}
+function renderStrip(){
+  document.getElementById('strip').innerHTML =
+    COPY.strip[LANG].map(([n,t])=>`<div><b>${n}</b><span>${t}</span></div>`).join('');
+}
+function renderFilters(){
+  document.getElementById('cats').innerHTML =
+    `<button class="chip ${activeCat==='all'?'on':''}" data-c="all">${UI.all[LANG]}</button>` +
+    CATEGORIES.map(c=>`<button class="chip ${activeCat===c.id?'on':''}" data-c="${c.id}">${c[LANG]}</button>`).join('');
+  document.getElementById('diets').innerHTML =
+    Object.entries(TAGS).map(([k,v])=>`<button class="chip d ${activeDiets.has(k)?'on':''}" data-d="${k}">${v[LANG]}</button>`).join('');
+  document.querySelectorAll('#cats .chip').forEach(b=>b.onclick=()=>{activeCat=b.dataset.c;renderFilters();renderGrid();});
+  document.querySelectorAll('#diets .chip').forEach(b=>b.onclick=()=>{
+    const d=b.dataset.d; activeDiets.has(d)?activeDiets.delete(d):activeDiets.add(d);
+    renderFilters();renderGrid();
+  });
+}
+function renderGrid(){
+  const q = query.trim().toLowerCase();
+  const list = PRODUCTS.filter(p=>
+    (activeCat==='all'||p.cat===activeCat) &&
+    [...activeDiets].every(d=>p.tags.includes(d)) &&
+    (!q || (p[LANG].n+' '+p[LANG].d).toLowerCase().includes(q))
+  );
+  document.getElementById('count').textContent = list.length + ' ' + UI.results[LANG];
+  const g = document.getElementById('grid');
+  if(!list.length){ g.innerHTML = `<p class="empty">${UI.no_results[LANG]}</p>`; return; }
+  g.innerHTML = list.map(p=>`
+    <article class="card">
+      <div class="card-img" onclick="openLb('assets/${p.img}')"><img src="assets/${p.img}" alt="${p[LANG].n}" loading="lazy"></div>
+      ${p.tags.length?`<div class="chiplets">${p.tags.map(t=>`<span class="chiplet ${t==='raw'?'raw':''}">${TAGS[t][LANG]}</span>`).join('')}</div>`:''}
+      <div class="card-body">
+        <h3>${p[LANG].n}</h3>
+        <p>${p[LANG].d}</p>
+        <div class="foot">
+          <span class="price">${money(p.price)}<small>${p.unit==='slice'?UI.per_slice[LANG]:UI.per_piece[LANG]}</small></span>
+          <a class="mini" href="#contact">${UI.order[LANG]} →</a>
+        </div>
+      </div>
+    </article>`).join('');
+}
+function renderDecor(){
+  document.getElementById('gal1').innerHTML = DECOR.kids.map(f=>`<img src="assets/${f}" alt="" loading="lazy" onclick="openLb('assets/${f}')">`).join('');
+  document.getElementById('gal2').innerHTML = DECOR.wedding.map(f=>`<img src="assets/${f}" alt="" loading="lazy" onclick="openLb('assets/${f}')">`).join('');
+  document.getElementById('decPrices').innerHTML = DECOR.prices.map(p=>`<li><span>${p[LANG]}</span><b>${p.price}</b></li>`).join('');
+  document.getElementById('decNote').textContent = DECOR.note[LANG];
+}
+function renderLists(){
+  document.getElementById('brunchList').innerHTML = BRUNCH.map(i=>`<li><span>${i[LANG]}</span><b>${i.price!=null?money(i.price):'—'}</b></li>`).join('');
+  document.getElementById('cateringList').innerHTML = CATERING.map(i=>`<li><span>${i[LANG]}</span><b>${money(i.price)}</b></li>`).join('');
+}
+function renderSteps(){
+  document.getElementById('steps').innerHTML = COPY.steps[LANG]
+    .map(([n,h,p])=>`<div class="step"><div class="n">${n}</div><h3>${h}</h3><p>${p}</p></div>`).join('');
+}
+function renderFaq(){
+  document.getElementById('faq').innerHTML = COPY.faq[LANG]
+    .map(([q,a])=>`<details><summary>${q}</summary><p>${a}</p></details>`).join('');
+}
+
+document.getElementById('q').addEventListener('input', e=>{ query=e.target.value; renderGrid(); });
+function openLb(src){ document.getElementById('lbImg').src=src; document.getElementById('lb').classList.add('on'); }
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lb').classList.remove('on');});
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+document.getElementById('yr').textContent = new Date().getFullYear();
+setLang(LANG);
+</script>
+</body>
+</html>

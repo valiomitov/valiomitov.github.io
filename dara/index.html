@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дара — 3 предложения за уебсайт / 3 website concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F4EF;--paper:#fff;--ink:#232B27;--soft:#61706A;--line:#E4E2D9;--acc:#B18B57}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;line-height:1.7}
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;margin:0;line-height:1.15}
+a{color:inherit}
+header{padding:66px 0 30px;text-align:center}
+header img{width:96px;margin:0 auto 20px}
+h1{font-size:clamp(2.1rem,4.4vw,3.2rem)}
+header p{color:var(--soft);max-width:62ch;margin:16px auto 0}
+.lang{display:inline-flex;border:1px solid var(--line);border-radius:99px;overflow:hidden;background:#fff;margin-top:22px}
+.lang button{background:none;border:none;font:inherit;font-size:.78rem;font-weight:700;padding:8px 16px;cursor:pointer;color:var(--soft)}
+.lang button.on{background:var(--ink);color:#fff}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;padding:34px 0 20px}
+.c{background:var(--paper);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:.3s}
+.c:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(35,43,39,.5)}
+.sw{display:flex;height:76px}
+.sw i{flex:1}
+.cb{padding:26px 24px 28px;display:flex;flex-direction:column;flex:1}
+.k{font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--acc);font-weight:700}
+.c h3{font-size:1.5rem;margin:8px 0 10px}
+.c p{color:var(--soft);font-size:.9rem;margin:0 0 16px;flex:1}
+.c ul{margin:0 0 20px;padding-left:18px;color:var(--soft);font-size:.85rem}
+.c ul li{margin-bottom:5px}
+.btn{display:block;text-align:center;background:var(--ink);color:#fff;text-decoration:none;padding:13px;border-radius:99px;font-size:.88rem;font-weight:500;transition:.25s}
+.btn:hover{background:var(--acc)}
+.hex{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.7rem;color:var(--soft);letter-spacing:.02em;margin-bottom:14px}
+
+.tbl{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:8px 26px 20px;margin:40px 0 20px;overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.88rem;min-width:640px}
+th,td{text-align:left;padding:13px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-weight:700;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+td:first-child{font-weight:600}
+.note{background:#fff;border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:12px;padding:22px 26px;margin:26px 0 60px;font-size:.9rem;color:var(--soft)}
+footer{padding:0 0 60px;text-align:center;color:var(--soft);font-size:.82rem}
+@media(max-width:900px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="assets/logo-mark.png" alt="Дара">
+    <h1 data-t="h1"></h1>
+    <p data-t="sub"></p>
+    <div class="lang"><button data-l="bg" class="on">BG</button><button data-l="en">EN</button></div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="cards" id="cards"></div>
+
+  <div class="tbl">
+    <table id="tbl"></table>
+  </div>
+
+  <div class="note" data-t="note"></div>
+</div>
+
+<footer><div class="wrap"><span data-t="foot"></span></div></footer>
+
+<script>
+const T = {
+  bg:{
+    h1:"Три предложения за уебсайт на Арт Сладкарница Дара",
+    sub:"Три напълно работещи шаблона, изградени върху истинския Каталог 2026 — 34 торти със снимки, описания и цени, плюс мъфини, сурови бонбони, солени изкушения, брънч, кетъринг и декорации. И трите са двуезични (BG/EN) и работят на телефон.",
+    note:"Всички шаблони използват един и същ файл <b>assets/data.js</b>. Промените в цени, описания и категории се правят само там и се отразяват автоматично и в трите сайта. Снимките са извлечени директно от Каталог 2026 и се намират в папка <b>assets/</b>.",
+    foot:"Дара — от природата · ул. „Екзарх Йосиф“ 1, гр. Царево · 087 883 8353 · @dara_cakess",
+    open:"Отвори шаблона",
+    cards:[
+      {k:"Шаблон 1",n:"Морска ванилия",
+       p:"Елегантен, светъл и „бутиков“ — най-близо до усещането на Vanilla Kitchen, но с морски нюанс, подходящ за Царево.",
+       f:["Класическа мрежа с карти и едри снимки","Филтри по категория + хранителен режим","Ивица с 4 предимства под героя","Най-универсален и лесен за поддръжка"],
+       sw:["#FBF8F2","#F2E8DA","#7CA8A2","#C48B8B","#B18B57"],
+       hex:"крем · пясък · морско стъкло · пепелива роза · старо злато",
+       url:"template-1-seaside.html"},
+      {k:"Шаблон 2",n:"Какао и карамел",
+       p:"Тъмен, топъл и премиум. Каталогът е оформен като печатно меню с цени — усещане за вечерна сладкарница и подаръчни торти.",
+       f:["Тъмна тема с карамелени акценти","Каталог като меню (две колони, точки, цени)","Хоризонтална лента с „подписни“ торти","Мозайка от декорации и сватбени торти"],
+       sw:["#1B1512","#251C18","#C98B4B","#E3AE74","#F5EFE6"],
+       hex:"еспресо · какао · карамел · кехлибар · крем",
+       url:"template-2-cocoa.html"},
+      {k:"Шаблон 3",n:"Шам фъстък и малина",
+       p:"Светъл, модерен и „здравословен“. Най-подготвен за онлайн поръчки — с търсачка, стъпки за поръчка и чести въпроси.",
+       f:["Търсене на живо по име и съставка","Лепкава лента с филтри при скрол","Раздел „Как да поръчате“ в 3 стъпки","Секция с често задавани въпроси"],
+       sw:["#FAFAF6","#E6F1DD","#6FA557","#FCE6EC","#D2547A"],
+       hex:"чупено бяло · шам фъстък · зелено · малина · розово",
+       url:"template-3-pistachio.html"}
+    ],
+    th:["","Шаблон 1 — Морска ванилия","Шаблон 2 — Какао и карамел","Шаблон 3 — Шам фъстък и малина"],
+    rows:[
+      ["Настроение","Елегантно, светло, бутиково","Топло, тъмно, премиум","Свежо, модерно, здравословно"],
+      ["Каталог","Мрежа с карти 3 колони","Печатно меню в 2 колони","Мрежа + търсачка на живо"],
+      ["Филтри","Категория + режим","Табове + режим","Категория + режим + търсене"],
+      ["Най-подходящ за","Общо представяне и сватби","Подаръчни торти и вечерни поводи","Онлайн поръчки и туристи"],
+      ["Допълнително","4 предимства, лайтбокс","Бягащ ред, мозайка, цитат","Стъпки за поръчка, ЧЗВ, числа"],
+      ["Езици","BG / EN","BG / EN","BG / EN"]
+    ]
+  },
+  en:{
+    h1:"Three website concepts for Dara Art Patisserie",
+    sub:"Three fully working templates built on the real Catalogue 2026 — 34 cakes with photos, descriptions and prices, plus muffins, raw bonbons, savoury bites, brunch, catering and decorations. All three are bilingual (BG/EN) and mobile-ready.",
+    note:"All templates share a single file, <b>assets/data.js</b>. Change a price, description or category once there and it updates across all three sites. Photographs are extracted directly from Catalogue 2026 and live in the <b>assets/</b> folder.",
+    foot:"Dara — from nature · 1 Ekzarh Yosif St, Tsarevo · +359 87 883 8353 · @dara_cakess",
+    open:"Open template",
+    cards:[
+      {k:"Template 1",n:"Seaside Vanilla",
+       p:"Elegant, light and boutique — closest to the Vanilla Kitchen feel, with a seaside note that suits Tsarevo.",
+       f:["Classic card grid with large photography","Category + dietary filters","Four-point benefit strip under the hero","The most versatile and easiest to maintain"],
+       sw:["#FBF8F2","#F2E8DA","#7CA8A2","#C48B8B","#B18B57"],
+       hex:"cream · sand · sea glass · dusty rose · antique gold",
+       url:"template-1-seaside.html"},
+      {k:"Template 2",n:"Cocoa & Caramel",
+       p:"Dark, warm and premium. The catalogue is set like a printed menu with prices — an evening patisserie and gift-cake feel.",
+       f:["Dark theme with caramel accents","Catalogue as a menu (two columns, leaders, prices)","Horizontal rail of signature cakes","Mosaic of decorations and wedding cakes"],
+       sw:["#1B1512","#251C18","#C98B4B","#E3AE74","#F5EFE6"],
+       hex:"espresso · cocoa · caramel · amber · cream",
+       url:"template-2-cocoa.html"},
+      {k:"Template 3",n:"Pistachio & Raspberry",
+       p:"Bright, modern and health-forward. The most order-ready of the three — with live search, ordering steps and an FAQ.",
+       f:["Live search by name and ingredient","Sticky filter bar on scroll","“How to order” in three steps","Frequently asked questions section"],
+       sw:["#FAFAF6","#E6F1DD","#6FA557","#FCE6EC","#D2547A"],
+       hex:"off-white · pistachio · green · raspberry · pink",
+       url:"template-3-pistachio.html"}
+    ],
+    th:["","Template 1 — Seaside Vanilla","Template 2 — Cocoa & Caramel","Template 3 — Pistachio & Raspberry"],
+    rows:[
+      ["Mood","Elegant, light, boutique","Warm, dark, premium","Fresh, modern, wholesome"],
+      ["Catalogue","3-column card grid","Printed menu, 2 columns","Grid + live search"],
+      ["Filters","Category + diet","Tabs + diet","Category + diet + search"],
+      ["Best for","General showcase and weddings","Gift cakes and evening occasions","Online orders and tourists"],
+      ["Extras","Benefit strip, lightbox","Marquee, mosaic, pull quote","Order steps, FAQ, key numbers"],
+      ["Languages","BG / EN","BG / EN","BG / EN"]
+    ]
+  }
+};
+
+let L = 'bg';
+function render(){
+  const d = T[L];
+  document.documentElement.lang = L;
+  document.querySelectorAll('[data-t]').forEach(el=>el.innerHTML = d[el.dataset.t]);
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on', b.dataset.l===L));
+  document.getElementById('cards').innerHTML = d.cards.map(c=>`
+    <div class="c">
+      <div class="sw">${c.sw.map(s=>`<i style="background:${s}"></i>`).join('')}</div>
+      <div class="cb">
+        <span class="k">${c.k}</span>
+        <h3>${c.n}</h3>
+        <div class="hex">${c.hex}</div>
+        <p>${c.p}</p>
+        <ul>${c.f.map(x=>`<li>${x}</li>`).join('')}</ul>
+        <a class="btn" href="${c.url}">${d.open} →</a>
+      </div>
+    </div>`).join('');
+  document.getElementById('tbl').innerHTML =
+    `<thead><tr>${d.th.map(h=>`<th>${h}</th>`).join('')}</tr></thead>` +
+    `<tbody>${d.rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}</tr>`).join('')}</tbody>`;
+}
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>{L=b.dataset.l;render();});
+render();
+</script>
+</body>
+</html>

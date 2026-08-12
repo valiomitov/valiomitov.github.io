@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дара — Арт Сладкарница | Царево</title>
+<meta name="description" content="Арт сладкарница Дара в Царево — ръчно правени торти, сурови десерти, брънч и кетъринг. Веган, без захар и без глутен.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Karla:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* =======================================================
+   ШАБЛОН 2 — „КАКАО & КАРАМЕЛ“ / TEMPLATE 2 — COCOA & CARAMEL
+   Palette: espresso, cocoa, caramel, amber, cream
+   Mood: warm, premium, evening, printed-menu feel
+   ======================================================= */
+:root{
+  --espresso:#1B1512; --cocoa:#251C18; --cocoa2:#31251F;
+  --cream:#F5EFE6; --cream-dim:#C6B8A8;
+  --caramel:#C98B4B; --amber:#E3AE74; --wine:#8A4A46;
+  --line:rgba(245,239,230,.14);
+  --disp:'Playfair Display', Georgia, serif;
+  --sans:'Karla','Helvetica Neue',Arial,sans-serif;
+  --shadow:0 26px 60px -30px rgba(0,0,0,.85);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--espresso);color:var(--cream);font-family:var(--sans);font-weight:300;line-height:1.75;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1200px;margin:0 auto;padding:0 26px}
+h1,h2,h3,h4{font-family:var(--disp);font-weight:400;line-height:1.14;margin:0}
+.eyebrow{font-size:.66rem;letter-spacing:.4em;text-transform:uppercase;color:var(--caramel);font-weight:500}
+.gold-rule{width:70px;height:1px;background:linear-gradient(90deg,var(--caramel),transparent);margin:16px 0}
+.gold-rule.c{background:linear-gradient(90deg,transparent,var(--caramel),transparent);margin:16px auto}
+
+/* --------- marquee --------- */
+.marquee{background:var(--caramel);color:var(--espresso);overflow:hidden;white-space:nowrap;font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;font-weight:600;padding:9px 0}
+.marquee span{display:inline-block;animation:slide 34s linear infinite;padding-right:40px}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* --------- header --------- */
+header{position:sticky;top:0;z-index:70;background:rgba(27,21,18,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;height:88px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{width:54px;height:54px;object-fit:contain;filter:invert(1) brightness(1.6) sepia(.3) saturate(1.2) hue-rotate(-12deg)}
+.brand b{font-family:var(--disp);font-size:1.4rem;font-weight:500;display:block;line-height:1.05;letter-spacing:.02em}
+.brand span{font-size:.58rem;letter-spacing:.36em;text-transform:uppercase;color:var(--caramel)}
+nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0;font-size:.73rem;letter-spacing:.22em;text-transform:uppercase}
+nav a{text-decoration:none;position:relative;padding-bottom:4px;color:var(--cream-dim);transition:.25s}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--caramel);transition:.3s}
+nav a:hover{color:var(--cream)}nav a:hover::after{width:100%}
+.btn{display:inline-block;border:1px solid var(--caramel);color:var(--caramel);padding:13px 28px;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;text-decoration:none;background:none;cursor:pointer;transition:.3s;font-family:var(--sans);font-weight:500}
+.btn:hover{background:var(--caramel);color:var(--espresso)}
+.btn-solid{background:var(--caramel);color:var(--espresso)}
+.btn-solid:hover{background:var(--amber);border-color:var(--amber)}
+.lang{display:flex;gap:3px;font-size:.68rem;letter-spacing:.2em}
+.lang button{background:none;border:none;color:var(--cream-dim);font:inherit;letter-spacing:.2em;cursor:pointer;padding:4px 6px}
+.lang button.on{color:var(--caramel);border-bottom:1px solid var(--caramel)}
+.burger{display:none;background:none;border:none;color:var(--cream);font-size:1.5rem;cursor:pointer}
+
+/* --------- hero --------- */
+.hero{position:relative;min-height:88vh;display:grid;place-items:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;filter:brightness(.42) saturate(.9)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(27,21,18,.25) 0%,rgba(27,21,18,.9) 78%)}
+.hero-in{position:relative;z-index:2;padding:110px 20px}
+.hero h1{font-size:clamp(2.9rem,7vw,6rem);letter-spacing:-.015em}
+.hero h1 i{font-style:italic;color:var(--amber)}
+.hero p{max-width:52ch;margin:24px auto 34px;color:#E4DACB;font-size:1.05rem}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--cream-dim);z-index:2}
+
+/* --------- signature rail --------- */
+.rail-sec{padding:88px 0 92px;background:var(--cocoa)}
+.rail{display:flex;gap:22px;overflow-x:auto;padding:8px 26px 22px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.rail::-webkit-scrollbar{height:5px}
+.rail::-webkit-scrollbar-thumb{background:var(--caramel)}
+.rail-card{flex:0 0 288px;scroll-snap-align:start;cursor:pointer}
+.rail-card .ph{aspect-ratio:3/4;overflow:hidden;position:relative}
+.rail-card img{width:100%;height:100%;object-fit:cover;transition:.7s cubic-bezier(.2,.7,.3,1)}
+.rail-card:hover img{transform:scale(1.07)}
+.rail-card h3{font-size:1.3rem;margin-top:16px}
+.rail-card .p{color:var(--caramel);font-family:var(--disp);font-size:1.1rem;margin-top:4px}
+
+/* --------- menu / catalog --------- */
+.menu-sec{padding:100px 0;background:var(--espresso)}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 48px}
+.sec-head h2{font-size:clamp(2.1rem,4vw,3.2rem)}
+.sec-head p{color:var(--cream-dim);font-size:.96rem;margin-top:14px}
+.tabs{display:flex;flex-wrap:wrap;gap:0;justify-content:center;border-bottom:1px solid var(--line);margin-bottom:14px}
+.tab{background:none;border:none;border-bottom:2px solid transparent;color:var(--cream-dim);font-family:var(--sans);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;padding:14px 20px;cursor:pointer;transition:.25s;margin-bottom:-1px}
+.tab:hover{color:var(--cream)}
+.tab.on{color:var(--caramel);border-color:var(--caramel)}
+.diets{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:22px 0 40px}
+.diet{border:1px solid var(--line);background:none;color:var(--cream-dim);padding:7px 17px;font-family:var(--sans);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;cursor:pointer;border-radius:2px;transition:.25s}
+.diet:hover{border-color:var(--caramel)}
+.diet.on{background:var(--caramel);color:var(--espresso);border-color:var(--caramel)}
+
+.menu{display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
+.mrow{display:flex;gap:20px;padding:24px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.mrow .thumb{flex:0 0 92px;height:92px;overflow:hidden;border-radius:50%;cursor:pointer;border:1px solid var(--line)}
+.mrow .thumb img{width:100%;height:100%;object-fit:cover;transition:.6s}
+.mrow:hover .thumb img{transform:scale(1.1)}
+.mrow .info{flex:1;min-width:0}
+.mrow .top{display:flex;align-items:baseline;gap:12px}
+.mrow h3{font-size:1.22rem;flex:1}
+.mrow .dots{flex:1;border-bottom:1px dotted rgba(245,239,230,.25);transform:translateY(-5px);min-width:14px}
+.mrow .pr{font-family:var(--disp);font-size:1.16rem;color:var(--amber);white-space:nowrap}
+.mrow p{font-size:.83rem;color:var(--cream-dim);margin:7px 0 0;line-height:1.6}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.badge{font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;border:1px solid var(--line);padding:3px 9px;color:var(--caramel);border-radius:2px}
+.empty{grid-column:1/-1;text-align:center;color:var(--cream-dim);padding:40px 0}
+
+/* --------- mosaic --------- */
+.mosaic-sec{padding:100px 0;background:var(--cocoa)}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:170px;gap:12px}
+.mosaic img{width:100%;height:100%;object-fit:cover;cursor:pointer;filter:brightness(.92);transition:.4s}
+.mosaic img:hover{filter:brightness(1.05)}
+.m-tall{grid-row:span 2}
+.m-wide{grid-column:span 2}
+.quote{max-width:760px;margin:44px auto 0;text-align:center;font-family:var(--disp);font-style:italic;font-size:1.18rem;color:#E1D6C6;line-height:1.65}
+.deco-prices{max-width:520px;margin:34px auto 0;list-style:none;padding:0}
+.deco-prices li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.deco-prices b{font-family:var(--disp);font-weight:400;color:var(--amber)}
+
+/* --------- two cards --------- */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:26px;padding:100px 0}
+.dcard{border:1px solid var(--line);overflow:hidden;background:var(--cocoa)}
+.dcard .ph{aspect-ratio:16/9;overflow:hidden}
+.dcard .ph img{width:100%;height:100%;object-fit:cover;filter:brightness(.85)}
+.dcard .bd{padding:36px 34px 40px}
+.dcard h2{font-size:1.9rem;margin-bottom:6px}
+.dcard>.bd>p{color:var(--cream-dim);font-size:.92rem}
+.plist{list-style:none;margin:20px 0 0;padding:0}
+.plist li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px dotted rgba(245,239,230,.18);font-size:.88rem}
+.plist b{font-family:var(--disp);font-weight:400;color:var(--amber);white-space:nowrap}
+
+/* --------- about --------- */
+.about{padding:110px 0;background:var(--espresso);text-align:center}
+.about img.mark{width:120px;margin:0 auto 26px;filter:invert(1) brightness(1.5) sepia(.35) saturate(1.3) hue-rotate(-12deg);opacity:.85}
+.about p{max-width:66ch;margin:18px auto;color:var(--cream-dim)}
+
+/* --------- contact --------- */
+.contact{padding:100px 0;background:var(--cocoa2);border-top:1px solid var(--line)}
+.cgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line)}
+.cc{padding:44px 30px;text-align:center;border-right:1px solid var(--line)}
+.cc:last-child{border-right:none}
+.cc h3{font-size:1.2rem;color:var(--caramel);margin-bottom:12px}
+.cc a,.cc p{color:var(--cream-dim);text-decoration:none;font-size:.9rem;margin:0}
+.cc a:hover{color:var(--amber)}
+
+footer{background:#150F0D;color:#7E7266;padding:44px 0;font-size:.76rem;letter-spacing:.1em}
+footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}
+footer a{color:#9A8D7E;text-decoration:none}footer a:hover{color:var(--caramel)}
+
+/* --------- lightbox --------- */
+.lb{position:fixed;inset:0;background:rgba(12,9,8,.96);display:none;place-items:center;z-index:200;padding:28px}
+.lb.on{display:grid}
+.lb img{max-width:92vw;max-height:88vh;object-fit:contain}
+.lb button{position:absolute;top:20px;right:26px;background:none;border:none;color:var(--caramel);font-size:2.3rem;cursor:pointer;line-height:1}
+
+@media(max-width:1000px){
+  .menu{grid-template-columns:1fr;gap:0}
+  .mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+  .duo{grid-template-columns:1fr}
+  .cgrid{grid-template-columns:1fr}
+  .cc{border-right:none;border-bottom:1px solid var(--line)}
+  nav ul{display:none}
+  .burger{display:block}
+  nav.open ul{display:flex;position:absolute;top:88px;left:0;right:0;background:var(--cocoa);flex-direction:column;gap:0;padding:8px 26px 20px;border-bottom:1px solid var(--line)}
+  nav.open ul li{padding:13px 0;border-bottom:1px solid var(--line)}
+}
+@media(max-width:600px){
+  .rail-card{flex:0 0 232px}
+  .mrow .thumb{flex:0 0 70px;height:70px}
+  .menu-sec,.mosaic-sec,.about,.contact{padding:68px 0}
+  .duo{padding:68px 0}
+}
+</style>
+</head>
+<body>
+
+<div class="marquee"><span id="mq"></span></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">
+      <img src="assets/logo-mark.png" alt="Дара">
+      <span><b data-i18n="brandName"></b><span data-i18n="brandMotto"></span></span>
+    </a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#menu" data-i18n="nav_catalog"></a></li>
+        <li><a href="#decor" data-i18n="nav_decor"></a></li>
+        <li><a href="#duo" data-i18n="nav_brunch"></a></li>
+        <li><a href="#about" data-i18n="nav_about"></a></li>
+        <li><a href="#contact" data-i18n="nav_contact"></a></li>
+      </ul>
+    </nav>
+    <div style="display:flex;gap:14px;align-items:center">
+      <div class="lang"><button data-lang="bg" class="on">BG</button><button data-lang="en">EN</button></div>
+      <a class="btn btn-solid" href="#contact" data-i18n="order_now"></a>
+      <button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero" id="top">
+  <div class="hero-bg"><img src="assets/hazelnut.jpg" alt=""></div>
+  <div class="hero-in">
+    <div class="eyebrow" data-i18n="heroEyebrow"></div>
+    <div class="gold-rule c"></div>
+    <h1 data-i18n-html="heroTitle"></h1>
+    <p data-i18n="heroLead"></p>
+    <div class="hero-cta">
+      <a class="btn btn-solid" href="#menu" data-i18n="view_catalog"></a>
+      <a class="btn" href="tel:+359878838353" data-i18n="call_us"></a>
+    </div>
+  </div>
+  <div class="scroll-hint" data-i18n="scrollHint"></div>
+</div>
+
+<!-- ============ SIGNATURE RAIL ============ -->
+<section class="rail-sec">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:34px">
+      <div class="eyebrow" data-i18n="sigEyebrow"></div>
+      <div class="gold-rule c"></div>
+      <h2 data-i18n="sigTitle"></h2>
+    </div>
+  </div>
+  <div class="rail" id="rail"></div>
+</section>
+
+<!-- ============ MENU ============ -->
+<section class="menu-sec" id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" data-i18n="catEyebrow"></div>
+      <div class="gold-rule c"></div>
+      <h2 data-i18n="catTitle"></h2>
+      <p data-i18n="catLead"></p>
+    </div>
+    <div class="tabs" id="tabs"></div>
+    <div class="diets" id="diets"></div>
+    <div class="menu" id="menuGrid"></div>
+    <p style="text-align:center;color:var(--cream-dim);font-size:.82rem;margin-top:34px" data-i18n="order_note"></p>
+  </div>
+</section>
+
+<!-- ============ DECOR MOSAIC ============ -->
+<section class="mosaic-sec" id="decor">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" data-i18n="decEyebrow"></div>
+      <div class="gold-rule c"></div>
+      <h2 data-i18n="decTitle"></h2>
+      <p data-i18n="decLead"></p>
+    </div>
+    <div class="mosaic" id="mosaic"></div>
+    <p class="quote" id="decNote"></p>
+    <ul class="deco-prices" id="decPrices"></ul>
+  </div>
+</section>
+
+<!-- ============ BRUNCH + CATERING ============ -->
+<div class="wrap">
+  <div class="duo" id="duo">
+    <div class="dcard">
+      <div class="ph"><img src="assets/brunch-1.jpg" alt=""></div>
+      <div class="bd">
+        <div class="eyebrow" data-i18n="nav_brunch"></div>
+        <h2 data-i18n="brunchTitle"></h2>
+        <p data-i18n="brunchLead"></p>
+        <ul class="plist" id="brunchList"></ul>
+      </div>
+    </div>
+    <div class="dcard">
+      <div class="ph"><img src="assets/catering-1.jpg" alt=""></div>
+      <div class="bd">
+        <div class="eyebrow" data-i18n="nav_catering"></div>
+        <h2 data-i18n="cateringTitle"></h2>
+        <p data-i18n="cateringLead"></p>
+        <ul class="plist" id="cateringList"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap">
+    <img class="mark" src="assets/logo-mark.png" alt="">
+    <div class="eyebrow" data-i18n="nav_about"></div>
+    <div class="gold-rule c"></div>
+    <h2 style="font-size:clamp(2rem,4vw,3rem)" data-i18n="aboutTitle"></h2>
+    <p data-i18n="aboutP1"></p>
+    <p data-i18n="aboutP2"></p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow" data-i18n="conEyebrow"></div>
+      <div class="gold-rule c"></div>
+      <h2 data-i18n="conTitle"></h2>
+    </div>
+    <div class="cgrid">
+      <div class="cc"><h3 data-i18n="conCall"></h3><a href="tel:+359878838353">087 883 8353</a><p data-i18n="hours_val" style="margin-top:8px;font-size:.8rem"></p></div>
+      <div class="cc"><h3 data-i18n="conFind"></h3><a id="mapLink" target="_blank" rel="noopener" data-i18n="address"></a></div>
+      <div class="cc"><h3 data-i18n="conFollow"></h3>
+        <a href="https://www.instagram.com/dara_cakess" target="_blank" rel="noopener">@dara_cakess</a><br>
+        <a href="https://www.facebook.com/daraartcakes" target="_blank" rel="noopener">daraartcakes</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> <span data-i18n="brandName"></span> — <span data-i18n="city"></span></span>
+    <span data-i18n="footNote"></span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" onclick="this.classList.remove('on')"><button>×</button><img id="lbImg" alt=""></div>
+
+<script src="assets/data.js"></script>
+<script>
+const COPY = {
+  marquee:{bg:"Ръчна изработка • Без изкуствени оцветители • Веган и без глутен опции • Смокини от нашия двор • ",
+           en:"Handmade • No artificial colourings • Vegan & gluten-free options • Figs from our own garden • "},
+  brandName:{bg:"Дара",en:"Dara"},
+  brandMotto:{bg:"Арт сладкарница",en:"Art Patisserie"},
+  heroEyebrow:{bg:"Арт сладкарница • Царево",en:"Art Patisserie • Tsarevo"},
+  heroTitle:{bg:"Дара<br><i>от природата</i>",en:"Dara<br><i>from nature</i>"},
+  heroLead:{bg:"Ръчно правени торти с ядки, фурми, кокос и мед. Всяка е рисувана на ръка и нито една не е повторена.",
+            en:"Handmade cakes with nuts, dates, coconut and honey. Each one hand-painted, none ever repeated."},
+  scrollHint:{bg:"Разгледайте ↓",en:"Scroll to explore ↓"},
+  sigEyebrow:{bg:"Любими на гостите",en:"Guest favourites"},
+  sigTitle:{bg:"Подписните ни торти",en:"Our signature cakes"},
+  catEyebrow:{bg:"Каталог 2026",en:"Catalogue 2026"},
+  catTitle:{bg:"Менюто",en:"The menu"},
+  catLead:{bg:"Плодови, шоколадови, маскарпоне, чийзкейк и сурови торти — цени на парче.",
+           en:"Fruit, chocolate, mascarpone, cheesecake and raw cakes — prices per slice."},
+  decEyebrow:{bg:"Ръчно рисувани",en:"Hand-painted"},
+  decTitle:{bg:"Декорации",en:"Decorations"},
+  decLead:{bg:"Детски празници, кръщенета и сватбени торти.",en:"Children's parties, christenings and wedding cakes."},
+  brunchTitle:{bg:"Брънч",en:"Brunch"},
+  brunchLead:{bg:"Тостове, поке, кроасани и сезонни салати — всяка сутрин.",
+              en:"Toasts, poke bowls, croissants and seasonal salads — every morning."},
+  cateringTitle:{bg:"Кетъринг",en:"Catering"},
+  cateringLead:{bg:"Хапки и солени изкушения за вашето събитие.",en:"Canapés and savoury bites for your event."},
+  aboutTitle:{bg:"Истински продукти, нищо повече",en:"Real ingredients, nothing else"},
+  aboutP1:{bg:"„Дара — от природата“ е малка арт сладкарница в град Царево. Работим само с истински продукти: ядки, фурми, кокос, чия, мед и плодове, много от които зреят в собствения ни двор.",
+           en:"“Dara — from nature” is a small art patisserie in Tsarevo. We work only with real ingredients: nuts, dates, coconut, chia, honey and fruit, much of it ripened in our own garden."},
+  aboutP2:{bg:"Всички декорации се рисуват ръчно с шоколад и естествени оцветители, а мотивите следват сезона. Затова всяка торта е уникална и неповторима.",
+           en:"Every decoration is hand-painted with chocolate and natural colourings, and the motifs follow the season. That is why every cake is unique and unrepeatable."},
+  conEyebrow:{bg:"Заповядайте",en:"Come and see us"},
+  conTitle:{bg:"Контакти и поръчки",en:"Contact & orders"},
+  conCall:{bg:"Обадете се",en:"Call us"},
+  conFind:{bg:"Намерете ни",en:"Find us"},
+  conFollow:{bg:"Последвайте ни",en:"Follow us"},
+  footNote:{bg:"Всяка торта е уникална и неповторима.",en:"Every cake is unique and unrepeatable."},
+  address:{bg:SITE.address.bg,en:SITE.address.en},
+  city:{bg:SITE.city.bg,en:SITE.city.en}
+};
+
+const SIGNATURE = ["dara","hazelnut","mascarpone-cherry","nougat-creme","choco-wave","raw-matcha-lime","french-almond"];
+/* safe storage — works in private mode and from file:// */
+const store = {
+  get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } },
+  set(k,v){ try{ localStorage.setItem(k,v); }catch(e){} }
+};
+let LANG = store.get('dara-lang') || 'bg';
+let activeCat='all', activeDiets=new Set();
+
+function setLang(l){
+  LANG=l; store.set('dara-lang',l);
+  document.documentElement.lang=l;
+  document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const s=COPY[el.dataset.i18n]||UI[el.dataset.i18n];
+    if(s) el.textContent=s[l];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    const s=COPY[el.dataset.i18nHtml]; if(s) el.innerHTML=s[l];
+  });
+  document.getElementById('mq').textContent = COPY.marquee[l].repeat(4);
+  document.getElementById('mapLink').href = SITE.mapsUrl;
+  renderRail(); renderTabs(); renderMenu(); renderMosaic(); renderLists();
+}
+
+function renderRail(){
+  document.getElementById('rail').innerHTML = SIGNATURE.map(id=>{
+    const p = PRODUCTS.find(x=>x.id===id); if(!p) return '';
+    return `<div class="rail-card" onclick="openLb('assets/${p.img}')">
+      <div class="ph"><img src="assets/${p.img}" alt="${p[LANG].n}" loading="lazy"></div>
+      <h3>${p[LANG].n}</h3>
+      <div class="p">${money(p.price)} <span style="font-family:var(--sans);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-dim)">${p.unit==='slice'?UI.per_slice[LANG]:UI.per_piece[LANG]}</span></div>
+    </div>`;
+  }).join('');
+}
+
+function renderTabs(){
+  document.getElementById('tabs').innerHTML =
+    `<button class="tab ${activeCat==='all'?'on':''}" data-c="all">${UI.all[LANG]}</button>` +
+    CATEGORIES.map(c=>`<button class="tab ${activeCat===c.id?'on':''}" data-c="${c.id}">${c[LANG]}</button>`).join('');
+  document.getElementById('diets').innerHTML =
+    Object.entries(TAGS).map(([k,v])=>`<button class="diet ${activeDiets.has(k)?'on':''}" data-d="${k}">${v[LANG]}</button>`).join('');
+  document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{activeCat=b.dataset.c;renderTabs();renderMenu();});
+  document.querySelectorAll('.diet').forEach(b=>b.onclick=()=>{
+    const d=b.dataset.d; activeDiets.has(d)?activeDiets.delete(d):activeDiets.add(d);
+    renderTabs();renderMenu();
+  });
+}
+
+function renderMenu(){
+  const list = PRODUCTS.filter(p=>(activeCat==='all'||p.cat===activeCat)&&[...activeDiets].every(d=>p.tags.includes(d)));
+  const el = document.getElementById('menuGrid');
+  if(!list.length){ el.innerHTML = `<p class="empty">${UI.no_results[LANG]}</p>`; return; }
+  el.innerHTML = list.map(p=>`
+    <div class="mrow">
+      <div class="thumb" onclick="openLb('assets/${p.img}')"><img src="assets/${p.img}" alt="${p[LANG].n}" loading="lazy"></div>
+      <div class="info">
+        <div class="top">
+          <h3>${p[LANG].n}</h3><span class="dots"></span>
+          <span class="pr">${money(p.price)}</span>
+        </div>
+        <p>${p[LANG].d}</p>
+        ${p.tags.length?`<div class="badges">${p.tags.map(t=>`<span class="badge">${TAGS[t][LANG]}</span>`).join('')}</div>`:''}
+      </div>
+    </div>`).join('');
+}
+
+function renderMosaic(){
+  const files = [...DECOR.wedding.slice(0,3), ...DECOR.kids];
+  const cls = ['m-tall','','','m-wide','','m-tall','',''];
+  document.getElementById('mosaic').innerHTML = files.map((f,i)=>
+    `<img class="${cls[i]||''}" src="assets/${f}" alt="" loading="lazy" onclick="openLb('assets/${f}')">`).join('');
+  document.getElementById('decNote').textContent = '„' + DECOR.note[LANG] + '“';
+  document.getElementById('decPrices').innerHTML = DECOR.prices.map(p=>`<li><span>${p[LANG]}</span><b>${p.price}</b></li>`).join('');
+}
+
+function renderLists(){
+  document.getElementById('brunchList').innerHTML = BRUNCH.map(i=>`<li><span>${i[LANG]}</span><b>${i.price!=null?money(i.price):'—'}</b></li>`).join('');
+  document.getElementById('cateringList').innerHTML = CATERING.map(i=>`<li><span>${i[LANG]}</span><b>${money(i.price)}</b></li>`).join('');
+}
+
+function openLb(src){ document.getElementById('lbImg').src=src; document.getElementById('lb').classList.add('on'); }
+document.addEventListener('keydown',e=>{if(e.key==='Escape')document.getElementById('lb').classList.remove('on');});
+document.querySelectorAll('.lang button').forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+document.getElementById('yr').textContent = new Date().getFullYear();
+setLang(LANG);
+</script>
+</body>
+</html>
