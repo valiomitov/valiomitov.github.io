@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Психолог в Бургас — Александра Соломи | на живо и онлайн</title>
-<meta name="description" content="Психолог и психотерапевт в Бургас. Консултации при тревожност, панически атаки, депресия, семейни и партньорски трудности. На живо и онлайн.">
+<meta name="description" content="Дипломиран психолог и сертифициран психотерапевт в Бургас. Консултации при тревожност, панически атаки, депресия, семейни и партньорски трудности.">
 
 <!-- ============================================================
      SEO — ЕДИНСТВЕНОТО МЯСТО ЗА СМЯНА НА ДОМЕЙНА
@@ -74,6 +74,20 @@
     "тревожност", "панически атаки", "депресия", "посттравматичен стрес",
     "обсесивно-компулсивно разстройство", "семейни консултации",
     "родителски умения", "осиновяване", "хранителни разстройства"
+  ],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate",
+      "name": "Certified Positive Psychotherapist (Master Training)",
+      "recognizedBy": { "@type": "Organization", "name": "World Association for Positive and Transcultural Psychotherapy (WAPP)" } },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "degree",
+      "name": "Магистър „Психологично консултиране“",
+      "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Бургаски свободен университет" } },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate",
+      "name": "Психиатрия за психолози",
+      "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Медицински университет — Пловдив" } },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "certificate",
+      "name": "Психолог в организацията",
+      "recognizedBy": { "@type": "CollegeOrUniversity", "name": "Великотърновски университет „Св. св. Кирил и Методий“" } }
   ],
   "availableService": [
     { "@type": "MedicalTherapy", "name": "Индивидуални психологични консултации" },
@@ -160,6 +174,30 @@
   .note p:last-child{margin:0}
   .closing{background:var(--sand);border-radius:var(--radius);padding:22px 26px;margin-top:26px;font-family:Georgia,serif;font-size:1.05rem;color:var(--green-dark)}
   @media(max-width:700px){.tick{grid-template-columns:1fr}}
+  /* Дипломи и сертификати */
+  .certs-head{text-align:center;max-width:60ch;margin:0 auto 36px}
+  .certs-head .eyebrow{color:var(--accent);font-weight:600;letter-spacing:1.5px;text-transform:uppercase;font-size:.78rem}
+  .certs-head h2{font-size:clamp(1.55rem,4vw,2.1rem);margin:10px 0 14px}
+  .certs-head p{color:var(--muted)}
+  .cert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+  .cert{margin:0}
+  .cert-btn{display:block;width:100%;padding:0;border:1px solid var(--sand);background:var(--paper);border-radius:14px;
+    overflow:hidden;cursor:zoom-in;transition:.25s;box-shadow:0 6px 18px rgba(70,88,63,.07)}
+  .cert-btn:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:var(--accent)}
+  .cert-btn img{width:100%;height:270px;object-fit:contain;object-position:center;display:block;padding:10px;background:#fff}
+  .cert figcaption{margin-top:12px;font-size:.9rem;font-weight:600;color:var(--green-dark);line-height:1.35;text-align:center}
+  .cert figcaption span{display:block;margin-top:4px;font-weight:400;font-size:.82rem;color:var(--muted)}
+
+  /* Лайтбокс */
+  .lightbox{position:fixed;inset:0;z-index:200;background:rgba(32,36,31,.92);display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:16px;padding:28px}
+  .lightbox[hidden]{display:none}
+  .lightbox img{max-width:min(94vw,900px);max-height:80vh;border-radius:8px;background:#fff;box-shadow:0 20px 60px rgba(0,0,0,.4)}
+  .lightbox p{color:#e9ece5;font-size:.92rem;text-align:center;margin:0}
+  .lb-close{position:absolute;top:16px;right:20px;width:46px;height:46px;border:0;border-radius:50%;
+    background:rgba(255,255,255,.12);color:#fff;font-size:1.9rem;line-height:1;cursor:pointer;transition:.2s}
+  .lb-close:hover{background:rgba(255,255,255,.25)}
+
   .creds{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
   .chip{background:var(--paper);border:1px solid var(--sand);border-radius:999px;padding:8px 16px;font-size:.85rem;color:var(--green-dark)}
 
@@ -196,6 +234,8 @@
 
   @media(max-width:880px){
     .hero,.about,.contact{grid-template-columns:1fr}
+    .cert-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+    .cert-btn img{height:230px}
     .about .ph{position:relative;top:auto;max-width:520px}
     .portrait{max-width:460px;width:100%}
     .grid,.steps{grid-template-columns:1fr 1fr}
@@ -205,6 +245,9 @@
   }
   @media(max-width:560px){
     .grid,.steps{grid-template-columns:1fr}
+    .cert-grid{gap:16px}
+    .cert-btn img{height:190px}
+    .cert figcaption{font-size:.82rem}
     .wrap{padding:0 18px}
     .hero-actions{gap:10px}
     .hero-actions .btn{flex:1 1 100%;text-align:center}
@@ -244,7 +287,7 @@
     <div>
       <p class="eyebrow">Психолог · Бургас и онлайн</p>
       <h1>Пространство за разбиране, доверие и спокойствие</h1>
-      <p class="lead">Дипломиран психолог и психотерапевт под супервизия. Помагам на хора в моменти на промяна, стрес и важни решения — с топлина, уважение и пълна конфиденциалност.</p>
+      <p class="lead">Дипломиран психолог и сертифициран психотерапевт. Помагам на хора в моменти на промяна, стрес и важни решения — с топлина, уважение и пълна конфиденциалност.</p>
       <div class="hero-actions">
         <a href="#contact" class="btn">Запазете консултация</a>
         <a href="#about" class="btn ghost">Запознайте се с мен</a>
@@ -313,7 +356,7 @@
 
       <div class="note">
         <p>Онлайн психологически консултации във Viber за страната и чужбина. Провеждам консултации на български, английски и гръцки език.</p>
-        <p>Сертифициран психотерапевт към Дружеството по Позитивна Психотерапия в България. Магистър по Психологично консултиране. Следдипломна квалификация към Медицински университет — Пловдив по специалността „Психиатрия за психолози“ и към ВТУ като „Психолог в организацията“. Обучения по Транзакционен анализ и EMDR. Участвам редовно в семинари, конференции и практични работилници.</p>
+        <p>Сертифициран психотерапевт (Certified Positive Psychotherapist, Master Training) към Световната асоциация по позитивна и транскултурална психотерапия (WAPP) и Дружеството по Позитивна Психотерапия в България. Магистър по Психологично консултиране. Следдипломна квалификация към Медицински университет — Пловдив по специалността „Психиатрия за психолози“ и към ВТУ като „Психолог в организацията“. Обучения по Транзакционен анализ и EMDR. Участвам редовно в семинари, конференции и практични работилници.</p>
         <p>Член на Дружеството на психолозите в Република България — рег. № BG RP 102771. Член на Българска асоциация „Осиновени и осиновители“, със специализация в работата с емоционални състояния, свързани с отношенията между осиновен, биологичен родител и осиновител.</p>
       </div>
 
@@ -321,6 +364,52 @@
 
     </div>
   </section>
+
+  <!-- ДИПЛОМИ И СЕРТИФИКАТИ -->
+  <section id="certificates" class="certs">
+    <div class="certs-head">
+      <p class="eyebrow">Квалификация</p>
+      <h2>Дипломи и сертификати</h2>
+      <p>Продължаващото обучение е част от професията. Част от документите ми може да видите тук — натиснете за увеличение.</p>
+    </div>
+    <div class="cert-grid">
+      <figure class="cert">
+        <button type="button" class="cert-btn" data-full="sert-wapp-psihoterapevt.jpg" data-cap="Сертифициран психотерапевт — WAPP, Висбаден">
+          <img src="sert-wapp-psihoterapevt.jpg" width="1250" height="892" loading="lazy" decoding="async"
+               alt="Сертификат Certified Positive Psychotherapist от World Association for Positive and Transcultural Psychotherapy">
+        </button>
+        <figcaption>Сертифициран психотерапевт<span>WAPP, Висбаден — Master Training, 810 часа</span></figcaption>
+      </figure>
+      <figure class="cert">
+        <button type="button" class="cert-btn" data-full="sert-diploma-bsu.jpg" data-cap="Магистър „Психологично консултиране“ — БСУ">
+          <img src="sert-diploma-bsu.jpg" width="675" height="1165" loading="lazy" decoding="async"
+               alt="Диплома за висше образование, магистър по психологично консултиране, Бургаски свободен университет">
+        </button>
+        <figcaption>Магистър „Психологично консултиране“<span>Бургаски свободен университет</span></figcaption>
+      </figure>
+      <figure class="cert">
+        <button type="button" class="cert-btn" data-full="sert-mu-plovdiv.jpg" data-cap="„Психиатрия за психолози“ — МУ Пловдив">
+          <img src="sert-mu-plovdiv.jpg" width="780" height="1093" loading="lazy" decoding="async"
+               alt="Свидетелство за професионална квалификация Психиатрия за психолози, Медицински университет Пловдив">
+        </button>
+        <figcaption>„Психиатрия за психолози“<span>Медицински университет — Пловдив</span></figcaption>
+      </figure>
+      <figure class="cert">
+        <button type="button" class="cert-btn" data-full="sert-vtu-organizacia.jpg" data-cap="„Психолог в организацията“ — ВТУ">
+          <img src="sert-vtu-organizacia.jpg" width="800" height="1163" loading="lazy" decoding="async"
+               alt="Свидетелство за професионална квалификация Психолог в организацията, Великотърновски университет">
+        </button>
+        <figcaption>„Психолог в организацията“<span>ВТУ „Св. св. Кирил и Методий“</span></figcaption>
+      </figure>
+    </div>
+  </section>
+</div>
+
+<!-- Лайтбокс за сертификатите -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Преглед на документ" hidden>
+  <button type="button" class="lb-close" aria-label="Затвори">&times;</button>
+  <img id="lb-img" src="" alt="">
+  <p id="lb-cap"></p>
 </div>
 
 <!-- SERVICES -->
@@ -392,5 +481,31 @@
   <p style="margin-top:6px;font-size:.8rem">Член на Дружеството на психолозите в Република България</p>
 </footer>
 
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'), img=document.getElementById('lb-img'),
+      cap=document.getElementById('lb-cap'), last=null;
+  function open(btn){
+    last=btn;
+    img.src=btn.dataset.full; img.alt=btn.querySelector('img').alt;
+    cap.textContent=btn.dataset.cap;
+    lb.hidden=false; document.body.style.overflow='hidden';
+    lb.querySelector('.lb-close').focus();
+  }
+  function close(){
+    lb.hidden=true; img.src=''; document.body.style.overflow='';
+    if(last) last.focus();
+  }
+  document.querySelectorAll('.cert-btn').forEach(function(b){
+    b.addEventListener('click', function(){ open(b); });
+  });
+  lb.addEventListener('click', function(e){
+    if(e.target===lb || e.target.classList.contains('lb-close')) close();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key==='Escape' && !lb.hidden) close();
+  });
+})();
+</script>
 </body>
 </html>
